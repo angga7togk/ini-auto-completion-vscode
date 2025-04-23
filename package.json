@@ -10,16 +10,32 @@
   "categories": [
     "Other"
   ],
-  
-  "activationEvents": ["onLanguage:java"],
+  "activationEvents": [
+    "onLanguage:java"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "ini-auto-completion.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "ini-auto-completion.writeToIni",
+        "title": "Write to INI"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "ctrl+alt+i",
+        "command": "ini-auto-completion.writeToIni",
+        "when": "editorTextFocus"
       }
     ]
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/angga7togk/ini-auto-completion-vscode"
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
